@@ -1,6 +1,5 @@
 Manifest-Version: 1.0
-Start-Class: com.djamware.springangularauth.SpringAngularAuthApplicati
- on
+Start-Class: com.infofall.serviceconsumer.ServiceConsumer
 Spring-Boot-Classes: WEB-INF/classes/
 Spring-Boot-Lib: WEB-INF/lib/
 Spring-Boot-Version: 2.1.6.RELEASE
