@@ -1,21 +1,21 @@
-# Slava Pidr 
+# Service Consumer 
+
+# Description
+This service is meant to enable consumer information maitenance, which will iclude registration of new and maintenance of existing consumer personal information records
 
 
-[![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
+# Mandatory Fields to desscribe consumer record
 
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
-
-Dillinger is a cloud-enabled, mobile-ready, offline-storage, AngularJS powered HTML5 Markdown editor.
-
-  - Type some Markdown on the left
-  - See HTML in the right
-  - Magic
-
-# New Features!
-
-  - Import a HTML file and watch it magically convert to Markdown
-  - Drag and drop images (requires your Dropbox account be linked)
-
+  - Consumer First Name
+  - Consumer Last Name
+  - Consumer Address 1
+  - Consumer Address 2
+  - Consumer City
+  - Consumer Province/State
+  - Concumer Country
+  - Postal/Zip Code
+  - Consumer Phone Number
+  - Consumer ID (system generated)
 
 You can also:
   - Import and save files from GitHub, Dropbox, Google Drive and One Drive
@@ -180,3 +180,4 @@ MIT
    [PlOd]: <https://github.com/joemccann/dillinger/tree/master/plugins/onedrive/README.md>
    [PlMe]: <https://github.com/joemccann/dillinger/tree/master/plugins/medium/README.md>
    [PlGa]: <https://github.com/RahulHP/dillinger/blob/master/plugins/googleanalytics/README.md>
+
