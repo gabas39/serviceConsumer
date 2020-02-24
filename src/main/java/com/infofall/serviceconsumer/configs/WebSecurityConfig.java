@@ -2,6 +2,7 @@ package com.infofall.serviceconsumer.configs;
 
 import javax.servlet.http.HttpServletResponse;
 
+import com.infofall.serviceconsumer.models.RoleType;
 import com.infofall.serviceconsumer.services.CustomUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -39,7 +40,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		http.httpBasic().disable().csrf().disable().sessionManagement()
 				.sessionCreationPolicy(SessionCreationPolicy.STATELESS).and().authorizeRequests()
 				.antMatchers("/api/auth/login").permitAll().antMatchers("/api/auth/register").permitAll()
-				.antMatchers("/api/products/**").hasAuthority("ADMIN").anyRequest().authenticated().and().csrf()
+				.antMatchers("/api/products/**").hasAuthority(RoleType.CONSUMER.name()).anyRequest().authenticated().and().csrf()
 				.disable().exceptionHandling().authenticationEntryPoint(unauthorizedEntryPoint()).and()
 				.apply(new JwtConfigurer(jwtTokenProvider));
 		http.cors();

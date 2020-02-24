@@ -41,10 +41,13 @@ public class AuthController {
         try {
             String username = data.getEmail();
             authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, data.getPassword()));
-            String token = jwtTokenProvider.createToken(username, this.users.findByEmail(username).getRoles());
+
+            User user = this.users.findByEmail(username);
+            String token = jwtTokenProvider.createToken(username, user.getRoles());
             Map<Object, Object> model = new HashMap<>();
             model.put("username", username);
             model.put("token", token);
+            model.put("user", user);
             return ok(model);
         } catch (AuthenticationException e) {
             throw new BadCredentialsException("Invalid email/password supplied");
